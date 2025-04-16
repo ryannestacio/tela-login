@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screens/screen_acadastro.dart';
+import 'screens/screen_recuperacao_senha.dart';
 
 void main() {
   runApp(const telaLogin());
@@ -16,7 +18,7 @@ class telaLogin extends StatelessWidget {
           backgroundColor: Colors.blueGrey[300],
           appBar: AppBar(
             title: Text(
-              "Tela de Login Teste",
+              "Login RE",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -47,14 +49,14 @@ class contrucaoDaTela extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 3),
+                border: Border.all(color: Colors.white, width: 1),
               ),
               child: Image.asset(
                 'assets/images/resistemas.png',
                 width: 150,
                 height: 150,
-                color: Colors.indigo,
-                colorBlendMode: BlendMode.difference,
+                //color: Colors.indigo,
+                //colorBlendMode: BlendMode.difference,
               ),
             ),
             /*Text(
@@ -70,7 +72,7 @@ class contrucaoDaTela extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: Colors.blueGrey,
-                border: Border.all(color: Colors.white, width: 3),
+                border: Border.all(color: Colors.white, width: 1),
               ),
               padding: EdgeInsets.all(5),
               width: double.infinity,
@@ -114,7 +116,9 @@ class contrucaoDaTela extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.white,
+                      //Cor do texto do botão
                       backgroundColor: Colors.indigo,
+                      //Cor de fundo do botão
                       elevation: 10,
                       shadowColor: Colors.indigo,
                     ),
@@ -140,7 +144,12 @@ class contrucaoDaTela extends StatelessWidget {
                       elevation: 10,
                       shadowColor: Colors.indigo,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Cadastro()),
+                      );
+                    },
                     child: Text(
                       'Cadastrar',
                       style: TextStyle(
@@ -153,11 +162,19 @@ class contrucaoDaTela extends StatelessWidget {
               ],
             ),
             SizedBox(height: 35),
-            Text(
-              'Esqueceu a senha?',
-              style: TextStyle(
-                decoration: TextDecoration.underline,
-                //Com o "underline" texto recebe uma linha reta abaixo
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RecuperacaoSenha()),
+                );
+              },
+              child: Text(
+                'Esqueceu a senha?',
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  //Com o "underline" texto recebe uma linha reta abaixo
+                ),
               ),
             ),
           ],
