@@ -8,7 +8,7 @@ class Cadastro extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blueGrey[300],
         appBar: AppBar(
           title: Text(
             'Cadastro',

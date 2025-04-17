@@ -8,6 +8,7 @@ class RecuperacaoSenha extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.blueGrey[300],
         appBar: AppBar(
           title: Text(
             "Recuperação de Senha",
@@ -15,6 +16,8 @@ class RecuperacaoSenha extends StatelessWidget {
           ),
           centerTitle: true,
           backgroundColor: Colors.blueGrey,
+          elevation: 7,
+          shadowColor: Colors.indigo,
         ),
         body: areaRecuperacao(),
       ),
