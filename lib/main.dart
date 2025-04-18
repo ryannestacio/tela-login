@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'screens/screen_acadastro.dart';
 import 'screens/screen_recuperacao_senha.dart';
@@ -87,21 +89,43 @@ class contrucaoDaTela extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20),
             TextFormField(
               decoration: InputDecoration(
                 icon: Icon(Icons.person, color: Colors.indigo),
                 hintText: 'Digite seu usuário ou e-mail...',
                 //Texto que ficará dentro do input.
                 label: Text('Usuário/E-mail'),
+                labelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
                 //Texto que subirá após p ponteiro ficar no input.
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.indigo, width: 2),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.indigo, width: 2),
+                ),
               ),
               autofocus: true,
             ),
+            SizedBox(height: 10),
             TextFormField(
               decoration: InputDecoration(
                 icon: Icon(Icons.password_rounded, color: Colors.indigo),
                 hintText: 'Digite sua senha...',
                 label: Text('Senha'),
+                labelStyle: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.indigo, width: 2),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.indigo, width: 2),
+                ),
               ),
               obscureText: true,
               //Para que o conteúdo digitado dentro do input seja ocultado.

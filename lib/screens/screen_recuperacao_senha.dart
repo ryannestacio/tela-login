@@ -10,6 +10,12 @@ class RecuperacaoSenha extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.blueGrey[300],
         appBar: AppBar(
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.home, color: Colors.white),
+          ),
           title: Text(
             "Recuperação de Senha",
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
